@@ -51,6 +51,7 @@
             <a class="nav-link" href="add_articles.php">Add Articles</a>
             <a class="nav-link" href="add_detailed_articles.php">Add Detailed Articles</a>
             <a class="nav-link" href="profile.php">Profile</a>
+            <a class="nav-link" href="totalstudentsdetials.php">Total Users</a>
             <a class="nav-link" href="../main.php">Logout</a>
         </nav>
     </div>

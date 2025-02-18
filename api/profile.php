@@ -6,7 +6,7 @@ if (isset($_SESSION['user_id'])) {
     $userId = $_SESSION['user_id'];
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $query = "SELECT name,role, email, dob FROM signup WHERE id = ?"; // Corrected column names (important!)
+        $query = "SELECT name, role, email, dob, password FROM signup WHERE id = ?"; 
         $stmt = $conn->prepare($query);
         $stmt->bind_param("i", $userId);
         $stmt->execute();
@@ -21,6 +21,7 @@ if (isset($_SESSION['user_id'])) {
                     'role' => $user['role'],
                     'email' => $user['email'],
                     'dob' => $user['dob'],
+                    'password' => $user['password'] // Plain text password
                 ]
             ]);
         } else {
@@ -31,20 +32,28 @@ if (isset($_SESSION['user_id'])) {
         $role = $_POST['role'];
         $email = $_POST['email'];
         $dob = $_POST['dob'];
+        $password = $_POST['password']; // Plain text password
 
-        
-        $query = "UPDATE register SET name = ?, role = ?, email = ?, dob= ? WHERE id = ?"; // Corrected column names
-        $stmt = $conn->prepare($query);
-        $stmt->bind_param("ssssssi", $name, $role, $email, $dob);
+        if (!empty($password)) {
+            $query = "UPDATE signup SET name = ?, role = ?, email = ?, dob = ?, password = ? WHERE id = ?";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("sssssi", $name, $role, $email, $dob, $password, $userId);
+        } else {
+            $query = "UPDATE signup SET name = ?, role = ?, email = ?, dob = ? WHERE id = ?";
+            $stmt = $conn->prepare($query);
+            $stmt->bind_param("ssssi", $name, $role, $email, $dob, $userId);
+        }
 
         if ($stmt->execute()) {
             echo json_encode([
                 'status' => 'success',
+                'message' => 'Profile updated successfully',
                 'data' => [
                     'name' => $name,
                     'role' => $role,
                     'email' => $email,
-                    'dob' => $dob
+                    'dob' => $dob,
+                    'password' => $password // Returning plain text password
                 ]
             ]);
         } else {

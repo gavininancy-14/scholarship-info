@@ -29,6 +29,9 @@
           <a class="nav-link active" aria-current="page" href="main.php">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="sprofile.php">Profile</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="../main.php">Logout</a>
         </li>
         <!-- <li class="nav-item">
