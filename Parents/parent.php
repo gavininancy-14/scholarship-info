@@ -13,7 +13,7 @@
             font-size: 24px;
             margin: 0;
             padding: 0;
-            background-color: #eef5ff;
+            background: linear-gradient(45deg, rgb(154, 248, 255) 0%, #fad0c4 100%);
         }
         .container {
             width: 80%;

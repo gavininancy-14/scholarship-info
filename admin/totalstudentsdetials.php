@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
             margin: 20px;
         }
 
@@ -38,10 +38,16 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+        .section-total{
+            padding: 90px 0px;
+        }
     </style>
 </head>
 <body>
+<?php include('side.php'); ?>
+<?php include('navbar.php'); ?>
 
+<section class="section-total">
     <h2>Student Details</h2>
     <table id="studentTable">
         <thead>
@@ -107,6 +113,6 @@
             });
         }
     </script>
-
+</section>
 </body>
 </html>

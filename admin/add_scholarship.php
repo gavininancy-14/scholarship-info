@@ -85,12 +85,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <style>
     body {
-        background-color: #f8f9fa;
+        background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
         font-family: Arial, sans-serif;
     }
 
     .container {
-        max-width: 1000px;
+        max-width: 800px;
         margin: auto;
     }
 
@@ -145,8 +145,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 </style>
 
+
 <body class="bg-light">
     <?php include('navbar.php') ?>
+    
     <div class="container mt-5" style="padding: 30px 0px;">
         <div class="card shadow p-4">
             <h2 class="text-center mb-4">Insert New Scholarship</h2>

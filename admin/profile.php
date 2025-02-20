@@ -10,14 +10,14 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
         .profile-container {
-            width: 350px;
+            width: 500px;
             background: white;
             padding: 25px;
             border-radius: 10px;
@@ -30,11 +30,11 @@
         }
         .profile-container h3 {
             margin-bottom: 10px;
-            font-size: 24px;
+            font-size: 28px;
             color: #333;
         }
         .profile-container p {
-            font-size: 14px;
+            font-size: 24px;
             color: #666;
             margin: 8px 0;
         }
@@ -49,7 +49,7 @@
             transition: background 0.3s;
         }
         .profile-container button:hover {
-            background: #4c00a4;
+            background:rgb(0, 164, 120);
         }
         #editProfileCard {
             display: none;
@@ -66,7 +66,7 @@
             margin: 10px 0;
             border-radius: 5px;
             border: 1px solid #ddd;
-            font-size: 14px;
+            font-size: 24px;
         }
         #editProfileCard button {
             width: 100%;
@@ -93,6 +93,8 @@
     </style>
 </head>
 <body>
+<?php include('navbar.php'); ?>
+<?php include('side.php'); ?>
     <div class="profile-container">
         <h3 id="name">Loading...</h3>
         <p id="role">Loading...</p>

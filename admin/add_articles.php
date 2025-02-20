@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,6 +45,7 @@
 </head>
 <body>
 <?php include('navbar.php'); ?>
+<?php include('side.php'); ?>
     <section class="add-articals">
     <div class="container">
         <h2 class="text-center">Submit Scholarship Articles</h2>

@@ -12,7 +12,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #e5f7fd;
+            background: linear-gradient(45deg, rgb(154, 248, 255) 0%, #fad0c4 100%);
             margin: 20px;
             padding: 0;
             display: flex;

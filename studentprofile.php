@@ -14,12 +14,12 @@
             margin: 0;
             padding: 0;
             background-color:rgb(222, 245, 249);
-            font-size: 20px;
+            font-size: 16px;
             text-align: center;
         }
         .container {
-            max-width: 1200px;
-            margin: 50px auto;
+            max-width: 1400px;
+            margin: 70px auto;
             background-color:rgb(244, 246, 246);
             padding: 30px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@
         }
         h1 {
             color: #4a90e2;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             font-size: 56px;
         }
         .content {

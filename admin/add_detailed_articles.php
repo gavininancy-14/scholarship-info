@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: rgb(180, 237, 244);
+            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,6 +42,7 @@
 </head>
 <body>
 <?php include('navbar.php'); ?>
+<?php include('side.php'); ?>
 <section class="detailedarticles">
     
     <div class="card p-4 shadow-lg">

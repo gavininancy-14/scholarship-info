@@ -46,7 +46,7 @@
 <div class="sidebar d-flex flex-column p-3">
         <h4>Menu</h4>
         <nav class="nav flex-column">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="admindashboard.php">Home</a>
             <a class="nav-link" href="add_scholarship.php">Add Scholarships</a>
             <a class="nav-link" href="add_articles.php">Add Articles</a>
             <a class="nav-link" href="add_detailed_articles.php">Add Detailed Articles</a>

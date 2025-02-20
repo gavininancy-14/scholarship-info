@@ -35,7 +35,7 @@ $conn->close();
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('images/b1.png');
+            background: linear-gradient(45deg, rgb(154, 248, 255) 0%, #fad0c4 100%);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
