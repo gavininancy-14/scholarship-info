@@ -25,20 +25,22 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Scholarships</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
+            background-color: rgb(209, 247, 250) ;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .scholarship-card {
-            background:rgb(231, 247, 247);
+            background: #EAF6FF;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -47,7 +49,7 @@ $conn->close();
             height: 400px;
         }
 
-        .deadline { 
+        .deadline {
             font-weight: bold;
             color: #ff4d4d;
         }
@@ -84,10 +86,15 @@ $conn->close();
             color: white;
             text-decoration: none;
         }
+        .section-featured{
+            padding: 90px 0px;
+        }
     </style>
 </head>
 
 <body>
+<?php include('navbar.php'); ?>
+    <section class="section-featured">
     <div class="container mt-4">
         <!-- Header Section -->
         <div class="header">
@@ -121,7 +128,7 @@ $conn->close();
 
                                     <div class="col-md-2" >
                                         <?php if (!empty($row['image_logo'])) { ?>
-                                            <img src="images/<?php echo htmlspecialchars($row['image_logo']); ?>" alt="Scholarship Logo" class="img-fluid mt-3" style="max-width: 80px;">
+                                            <img src="<?php echo htmlspecialchars($row['image_logo']); ?>" alt="Scholarship Logo" class="img-fluid mt-3" style="max-width: 80px;">
                                         <?php } ?>
                                         <p style="display: flex;
   flex-direction: column;
@@ -147,6 +154,8 @@ $conn->close();
             </div>
         </div>
     </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

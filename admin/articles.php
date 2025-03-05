@@ -25,21 +25,22 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholarship Articles</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
+            background-color: rgb(209, 247, 250) ;
             margin: 0;
             padding: 20px;
         }
 
         .container {
             max-width: 1300px;
-            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+            background-color: rgb(209, 247, 250) ;
             margin: auto;
             text-align: center;
             padding: 20px;
@@ -86,10 +87,15 @@ $conn->close();
             color: blue;
             font-size: 18px;
         }
+        .section-articles{
+            padding: 90px 0px;
+        }
     </style>
 </head>
 
 <body>
+<?php include('navbar.php'); ?>
+    <section class="section-articles">
     <div class="container">
         <h1>Scholarship Articles</h1>
         <p>Experienced in the higher education field, the StudySponsr team ensures students and parents have access to current student life news. Get the latest information on student loans and student loan news, and the college application process. Find lists of scholarships for college students and for high school seniors, including tips on how to get a scholarship and advice on how to write a scholarship essay</p>
@@ -97,7 +103,7 @@ $conn->close();
             <?php if ($result->num_rows > 0) { ?>
                 <?php while ($row = $result->fetch_assoc()) { ?>
                     <div class="card">
-                        <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
+                        <img src="<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>">
                         <div class="card-content">
                             <h2><?php echo htmlspecialchars($row['name']); ?></a></h2>
 
@@ -117,6 +123,7 @@ $conn->close();
             <?php } ?>
         </div>
     </div>
+    </section>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

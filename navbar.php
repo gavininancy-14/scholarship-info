@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="main.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="students.php">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,7 +34,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="featuredscholarship.php">Featured Scholarships</a></li>
-            <li><a class="dropdown-item" href="articles.php">Articles</a></li>
+            <li><a class="dropdown-item" href="articles.php">Scholarship News</a></li>
             <!-- <li><hr class="dropdown-divider"></li> -->
             <li><a class="dropdown-item" href="detailedarticles.php">Detailed Articles</a></li>
           </ul>

@@ -26,8 +26,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Scholarships</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -35,7 +34,9 @@ $conn->close();
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, rgb(154, 248, 255) 0%, #fad0c4 100%);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(209, 247, 250) !important;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

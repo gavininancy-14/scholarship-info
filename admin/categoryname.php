@@ -28,10 +28,11 @@ if (isset($_GET['category'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scholarship Details</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
+            background-color: rgb(209, 247, 250) ;
             margin: 0;
             padding: 0;
             display: flex;
@@ -113,9 +114,14 @@ if (isset($_GET['category'])) {
                 font-size: 20px;
             }
         }
+        .section-category{
+            padding: 90px 0px;
+        }
     </style>
 </head>
 <body>
+<?php include('navbar.php'); ?>
+<section class="section-category">
 <div class="container">
     <h2>Scholarships in "<?php echo htmlspecialchars($category); ?>"</h2>
 
@@ -126,7 +132,7 @@ if (isset($_GET['category'])) {
             // Display category image only once
             if ($first_row && !empty($row['image'])) {
                 // Correct way to display the image:
-                echo "<img src='images/" . htmlspecialchars($row['image']) . "' alt='Scholarship Image' style='width:100%;'>"; // Added styling
+                echo "<img src='" . htmlspecialchars($row['image']) . "' alt='Scholarship Image' style='width:100%;'>"; // Added styling
                 $first_row = false;
             }
         
@@ -144,6 +150,7 @@ if (isset($_GET['category'])) {
     $connection->close();
     ?>
 </div>
-
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

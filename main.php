@@ -14,6 +14,43 @@
             font-family: Arial, sans-serif;
             background-color:rgb(206, 235, 243);
         }
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: lightblue;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFA500;
+}
+        button {
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-light-green {
+    background-color: #32CD32;
+    color: white;
+}
+
+.btn-light-green a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-light-green:hover {
+    background-color: #2E8B57;
+}
 
         .hero {
             background: url('images/scholarship-bg.jpg') no-repeat center center;
@@ -98,8 +135,9 @@
     <header class="d-flex justify-content-between align-items-center p-3 bg-white shadow-sm">
         <div class="logo text-warning fs-4 fw-bold">StudySponsor</div>
         <div>
-            <button class="btn btn-success"><a href="registration.php">Sign up</a></button>
-            <button class="btn btn-success"><a href="login.php">Login</a></button>
+        <button class="btn btn-light-green"><a href="registration.php">Sign up</a></button>
+<button class="btn btn-light-green"><a href="login.php">Login</a></button>
+
         </div>
 
     </header>
@@ -116,9 +154,9 @@
         <h2>What is StudySponsor?</h2>
         <p>The leading scholarship database, our platform is designed to simplify the scholarship search for high school and college students. No more digging to find scholarships you qualify for. Students create a profile and get personalized scholarship recommendations.
 
-StudySponsor isn't just for scholarships. We provide students and their parents with helpful information to help them navigate their educational journeys—from college or trade school, throughout college and/or graduate school, and into a career.
+StudySponsor isn't just for scholarships. We provide students and their parents with helpful information to help them navigate their educational journeys—from college or trade school, throughout college and/or graduate school, and into a career.</p><br>
 
-Our platform offers guidance on financial aid, college admissions, and career planning to help students make informed decisions about their future. We also provide tips on crafting winning scholarship applications, writing compelling essays, and preparing for interviews. Whether you're a first-time applicant or a returning student, StudySponsor makes the scholarship process easier and more accessible. Plus, we continuously update our database to ensure you never miss out on new opportunities!</p>
+<p>Our platform offers guidance on financial aid, college admissions, and career planning to help students make informed decisions about their future. We also provide tips on crafting winning scholarship applications, writing compelling essays, and preparing for interviews. Whether you're a first-time applicant or a returning student, StudySponsor makes the scholarship process easier and more accessible. Plus, we continuously update our database to ensure you never miss out on new opportunities!</p>
     </section>
 
     <section class="container my-4 text-center bg-white p-4 shadow rounded">
@@ -158,7 +196,8 @@ Our platform offers guidance on financial aid, college admissions, and career pl
 </section>
 
     <footer class="text-center bg-primary text-white p-3">
-        <button class="btn btn-success"><a href="studysponsrwork.php">Join For Free</a></button>
+    <button class="btn btn-light-green"><a href="studysponsrwork.php">Join For Free</a></button>
+
     </footer>
 </body>
 

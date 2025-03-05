@@ -33,14 +33,15 @@ $conn->close();
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
+            background-color: rgb(209, 247, 250) ;
             margin: 0;
+            font-size: 18px;
             padding: 20px;
         }
 
         .container {
             max-width: 1300px;
-            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+            background-color: rgb(209, 247, 250) ;
             margin: auto;
             text-align: center;
             padding: 20px;
@@ -50,7 +51,7 @@ $conn->close();
         .articles {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 40px;
             margin-top: 20px;
         }
 
@@ -126,5 +127,4 @@ $conn->close();
     </div>
     </section>
 </body>
-
 </html>

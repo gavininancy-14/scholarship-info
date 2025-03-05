@@ -104,11 +104,49 @@
         .signup a:hover {
             text-decoration: underline;
         }
+        .navbar-collapse {
+            flex-grow: 0 !important;
+        }
+        .navbar {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            z-index: 1000;
+        }
+        body {
+            display: flex;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none !important;
+            }
+        }
+        @media (min-width: 769px) {
+            .navbar {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-<?php include('navbar.php'); ?>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-warning fs-4 fw-bold" href="#">StudySponsor</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="main.php">Home</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 
     <div class="login-container">
         <h2>Log in to StudySponsr</h2>

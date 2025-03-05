@@ -21,13 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $award_amount = $_POST['award_amount'];
     $deadline = $_POST['deadline'];
     $description = $_POST['description'];
+    $website = $_POST['website'];
+
 
     
     // Prepare and execute SQL query
-    $sql = "INSERT INTO detailed_articles (Category_name, title, award_amount, deadline, description) VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO detailed_articles (Category_name, title, award_amount, deadline, description, website) VALUES (?, ?, ?, ?, ?, ?)";
     
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $category_name, $title, $award_amount, $deadline, $description);
+    $stmt->bind_param("ssssss", $category_name, $title, $award_amount, $deadline, $description, $website);
 
     if ($stmt->execute()) {
         echo json_encode(["status" => "success", "message" => "Record added successfully"]);

@@ -12,6 +12,7 @@
     <style>
         body {
             min-height: 100vh;
+            background-color: rgb(253, 253, 253);;
             display: flex;
             flex-wrap: nowrap;
         }
@@ -66,8 +67,8 @@
         <div class="offcanvas-body">
             <nav class="nav flex-column">
                 <a class="nav-link" href="admindashboard.php">Home</a>
-                <a class="nav-link" href="add_scholarship.php">Add Scholarships</a>
-                <a class="nav-link" href="add_articles.php">Add Articles</a>
+                <a class="nav-link" href="add_scholarship.php">Add Featured Scholarships</a>
+                <a class="nav-link" href="add_articles.php">Add Scholarship Articles</a>
                 <a class="nav-link" href="add_detailed_articles.php">Add Detailed Articles</a>
                 <a class="nav-link" href="profile.php">Profile</a>
                 <a class="nav-link" href="login.php">Logout</a>
@@ -113,31 +114,32 @@
 
             $conn->close();
             ?>
+<?php
+$dashboardItems = [
+    ["icon" => "fa-clipboard-list", "label" => "Total Scholarships", "count" => $counts['total_scholarships'], "link" => "featuredscholarship.php"],
+    ["icon" => "fa-building", "label" => "Total Scholarship Articles", "count" => $counts['total_articles'], "link" => "articles.php"],
+    ["icon" => "fa-clipboard-list", "label" => "Total Detailed Articles", "count" => $counts['total_detailed_articles'], "link" => "categoryname.php"],
+    ["icon" => "fa-user", "label" => "Total Student Users", "count" => $counts['total_students'], "link" => "#"], // No link for now
+    ["icon" => "fa-user", "label" => "Total Parent Users", "count" => $counts['total_parents'], "link" => "#"], // No link for now
+];
 
-            <!-- Dashboard Cards -->
-            <?php
-            $dashboardItems = [
-                ["icon" => "fa-user", "label" => "Total Scholarships", "count" => $counts['total_scholarships']],
-                ["icon" => "fa-building", "label" => "Total Articles", "count" => $counts['total_articles']],
-                ["icon" => "fa-clipboard-list", "label" => "Total Detailed Articles", "count" => $counts['total_detailed_articles']],
-                ["icon" => "fa-user", "label" => "Total Student Users", "count" => $counts['total_students']],
-                ["icon" => "fa-user", "label" => "Total Parent Users", "count" => $counts['total_parents']],
-            ];
-
-            foreach ($dashboardItems as $item) {
-                echo '
-                    <div class="col-md-4">
-                        <div class="content d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <span class="icon-wrapper me-3"><i class="fas ' . $item['icon'] . '"></i></span>
-                                <h3>' . $item['label'] . '</h3>
-                            </div>
-                            <h4>' . $item['count'] . '</h4>
-                        </div>
+foreach ($dashboardItems as $item) {
+    echo '
+        <div class="col-md-4">
+            <a href="' . $item['link'] . '" style="text-decoration: none; color: inherit;">
+                <div class="content d-flex align-items-center justify-content-between p-3 border rounded shadow-sm">
+                    <div class="d-flex align-items-center">
+                        <span class="icon-wrapper me-3"><i class="fas ' . $item['icon'] . '"></i></span>
+                        <h3>' . $item['label'] . '</h3>
                     </div>
-                ';
-            }
-            ?>
+                    <h4>' . $item['count'] . '</h4>
+                </div>
+            </a>
+        </div>
+    ';
+}
+?>
+
         </div>
 
         <!-- Chart Section -->
@@ -154,7 +156,7 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Scholarships', 'Articles', 'Detailed Articles', 'Students', 'Parents'],
+                labels: [' Featured Scholarships', ' Scholarship Articles', 'Detailed Articles', 'Students', 'Parents'],
                 datasets: [{
                     label: 'Counts',
                     data: [

@@ -35,15 +35,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     mysqli_stmt_close($checkEmailStmt);
 
-    // Secure password hashing
-    $hashed_password = password_hash($password, PASSWORD_BCRYPT);
+    // Store password as plain text (Not recommended for security reasons)
+    $plain_password = $password;
 
     // Prepare SQL query
     $stmt = mysqli_prepare($conn, "INSERT INTO signup (name, role, dob, email, password, referral) VALUES (?, ?, ?, ?, ?, ?)");
 
     if ($stmt) {
         // Bind parameters
-        mysqli_stmt_bind_param($stmt, "ssssss", $name, $role, $birthdate, $email, $hashed_password, $referral);
+        mysqli_stmt_bind_param($stmt, "ssssss", $name, $role, $birthdate, $email, $plain_password, $referral);
 
         // Execute the statement
         if (mysqli_stmt_execute($stmt)) {

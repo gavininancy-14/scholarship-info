@@ -32,9 +32,9 @@ if (isset($_GET['category'])) {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
             margin: 0;
             padding: 0;
+            background-color: rgb(209, 247, 250) !important;
             display: flex;
             justify-content: center;
         }

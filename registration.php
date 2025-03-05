@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration | StudySponsr</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -54,8 +55,8 @@ h2 {
 form {
     margin-top: 20px;
     background-color: white;
-    padding: 20px;
-    width: 50%;
+    padding:45px;
+    width: 60%;
     margin: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -64,7 +65,7 @@ form {
 form label {
     display: block;
     margin: 15px 0 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 form input, form select, form button {
@@ -90,26 +91,26 @@ form button:hover {
 
 footer {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 22px;
     text-align: center;
 }
 
     </style>
 </head>
 <body>
-    <header>
-        <h1>StudySponsr</h1>
-        <nav>
-            <a href="featuredscholarship.php">Scholarships</a>
-            <a href="students.php">Students</a>
-            <a href="parents/parent.php">Parents</a>
-        </nav>
-    </header>
+<header class="sticky-top bg-white shadow-sm">
+    <h1 class="text-warning">StudySponsr</h1>
+    <nav>
+        <a href="main.php" class="text-dark fw-bold text-decoration-none me-3">Home</a>
+        <!-- <a href="students.php" class="text-dark fw-bold text-decoration-none me-3">Students</a>
+        <a href="parents/parent.php" class="text-dark fw-bold text-decoration-none">Parents</a> -->
+    </nav>
+</header>
     <main>
         <h2>REGISTRATION</h2>
         <form id="registration-form">
 
-        <label>YOUR Name:</label>
+        <label>YOUR NAME:</label>
         <input type="text" name="name" required>
 
             <label>I AM A:</label>
@@ -134,10 +135,12 @@ footer {
             </select>
 
             <button type="submit">Create</button>
-        </form>
-        <footer>
+
+            <footer>
             Already have an account? <a href="login.php">LOGIN</a>
         </footer>
+        </form>
+       
     </main>
 </body>
 </html>

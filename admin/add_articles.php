@@ -9,13 +9,37 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
+            background-color:rgb(188, 236, 250);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+        .sidebar {
+            min-width: 290px;
+            max-width: 280px;
+            height: 100vh;
+            background-color:rgb(150, 199, 251);
+    position: relative;
+    top: 55px; /* Adjust as needed */
+}
+        .sidebar .nav-link {
+            color: #333;
+            padding: 10px;
+            font-weight: 500;
+            color: white; /* Ensure text is visible */
+        }
+
+        .sidebar .nav-link:hover {
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+
+        }
+        canvas{
+            width: 1186px !important;
+        }
+
         .add-articals .container {
             width: 90%;
             /* max-width: 800px; */
@@ -40,12 +64,65 @@
         .add-articals{
             width: 90%;
         }
+        .navbar-collapse {
+            flex-grow: 0 !important;
+        }
+        .navbar {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            z-index: 1000;
+        }
+        body {
+            display: flex;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none !important;
+            }
+        }
+        @media (min-width: 769px) {
+            .navbar {
+                width: 100%;
+            }
+        }
     </style>
     
 </head>
 <body>
-<?php include('navbar.php'); ?>
-<?php include('side.php'); ?>
+<body class="bg-light">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-warning fs-4 fw-bold" href="#">StudySponsor</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="admindashboard.php">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="../main.php">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="sidebar d-flex flex-column p-3">
+        <h4>Menu</h4>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="admindashboard.php">Home</a>
+            <a class="nav-link" href="add_scholarship.php">Add Featured Scholarships</a>
+            <a class="nav-link" href="add_articles.php">Add Scholarship Articles</a>
+            <a class="nav-link" href="add_detailed_articles.php">Add Detailed Articles</a>
+            <a class="nav-link" href="profile.php">Profile</a>
+            <a class="nav-link" href="totalstudentsdetials.php">Total Users</a>
+            <a class="nav-link" href="../main.php">Logout</a>
+        </nav>
+    </div>
+
     <section class="add-articals">
     <div class="container">
         <h2 class="text-center">Submit Scholarship Articles</h2>
@@ -70,10 +147,7 @@
                 <input type="text" class="form-control" id="category_name" name="category_name" placeholder="Category Name" required>
                 <label for="category_name">Category Name</label>
             </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="detailed_scholarships" name="detailed_scholarships" placeholder="Detailed Scholarships" required>
-                <label for="detailed_scholarships">Detailed Scholarships</label>
-            </div>
+           
             <button type="submit" class="btn btn-primary w-100">Add Article</button>
         </form>
         <div class="message" id="responseMessage" style="display: none;"></div>

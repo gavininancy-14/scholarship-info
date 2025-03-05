@@ -6,15 +6,14 @@
     <title>Help Your Student Plan for College</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            font-size: 24px;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(45deg, rgb(154, 248, 255) 0%, #fad0c4 100%);
-        }
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(209, 247, 250) !important;
+}
         .container {
             width: 80%;
             margin: 40px auto;
@@ -24,7 +23,7 @@
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
         }
         .header {
-            background-color:rgb(74, 224, 219);
+            background-color:rgb(63, 239, 234);
             color: white;
             text-align: center;
             padding: 20px;
@@ -50,8 +49,10 @@
             border-radius: 10px;
         }
         h2 {
+            font-weight: bold;
             color: #003366;
             margin-top: 30px;
+            
         }
         p {
             color: #333;
@@ -92,8 +93,8 @@
         <div class="header">How to Help Your Student Plan for College</div>
         <div class="content">
             <div class="text-content">
-                <p>Know What Your Family and College-Bound Student Should Do to Prepare for College with a Simplified College-Planning Process</p>
-                <p>Studysponsor’s Parent Page provides scholarship information, financial aid tips, important dates, current events related to student life, an internship directory, and helpful articles for parents.</p>
+                <p>StudySponsor's Parent Page is a valuable resource designed to simplify the college-planning process for families. It offers comprehensive scholarship information, including a vast database of opportunities and personalized matching tools to help students find financial aid. Parents can access financial aid tips, step-by-step FAFSA guidance, and insights into grants, loans, and work-study programs. The platform also keeps families informed about important application deadlines, college events, and standardized test dates. </p>
+                <p>Parents can also find helpful articles on supporting their child's transition to college, maintaining engagement, and fostering independence. With these tools, StudySponsor’s Parent Page empowers families to navigate the complexities of college admissions and financial planning with confidence.</p>
             </div>
             <div class="image-content">
                 <img src="../images/p2.png" alt="Students planning for college">

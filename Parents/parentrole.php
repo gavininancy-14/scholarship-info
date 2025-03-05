@@ -6,15 +6,16 @@
     <title>Parent Loan Information</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, rgb(154, 248, 255) 0%, #fad0c4 100%);
-            margin: 20px;
-            padding: 0;
+            body {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(209, 247, 250) !important;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,7 +29,7 @@
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
         }
         .header-box {
-            background-color:rgb(97, 245, 230);
+            background-color:rgb(60, 230, 213);
             color: white;
             padding: 40px;
             text-align: center;
@@ -109,8 +110,8 @@
 
     <div class="content-container">
         <div class="text-content">
-            <p>From college savings plans to helping their child secure financial aid via the Free Application for Federal Student Aid (FAFSA), there may still be a financial gap—even after combining these resources—when it comes to helping your child pay for college.</p>
-            <p>The cost of attending college involves more than tuition. Your child will need textbooks, room and board, and technology to support their higher education journey.</p>
+            <p>Paying for college involves more than just tuition; students also need to cover expenses like textbooks, room and board, and technology. While college savings plans and financial aid from the Free Application for Federal Student Aid (FAFSA) can help, there may still be a financial gap that families need to address. Fortunately, there are several options available to help bridge this gap.One of the best ways to reduce college costs is through scholarships and grants. Many organizations, colleges, and nonprofits offer merit-based and need-based financial aid that does not need to be repaid. Websites like Fastweb and Scholarships.com provide extensive databases of scholarships students can apply for. Grants, such as the Pell Grant, are available for students with financial need and can significantly reduce the overall cost of college.</p>
+            <p>By combining scholarships, work opportunities, payment plans, loans, and smart financial strategies, families can make higher education more affordable. Planning ahead and exploring all available resources can help ensure that students can pursue their college education without overwhelming financial burdens.</p>
         </div>
         <div class="image-container">
             <img src="../images/parent.png" alt="Parent and Child">

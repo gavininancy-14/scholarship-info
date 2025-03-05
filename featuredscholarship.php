@@ -34,11 +34,12 @@ $conn->close();
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
+            background-color: rgb(209, 247, 250) ;
+            font-size: 17px;
         }
 
         .scholarship-card {
-            background:rgb(231, 247, 247);
+            background:rgb(252, 252, 252);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -120,7 +121,7 @@ $conn->close();
                                 <div class="row">
                                     <div class="col-md-10">
                                         <p style="display: flex;gap: 10px;align-items: center;"><i class="fa-solid fa-award"></i><strong>Award:</strong> <?php echo htmlspecialchars($row['award']); ?></p>
-                                        <p class="deadline">📅 Deadline: <?php echo htmlspecialchars($row['deadline']); ?></p>
+                                        <p class="deadline">📅 <?php echo htmlspecialchars($row['deadline']); ?></p>
                                         <p><strong>Description:</strong> <?php echo nl2br(htmlspecialchars($row['description'])); ?></p>
                                     </div>
 

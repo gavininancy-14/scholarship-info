@@ -8,10 +8,9 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
+      background-color: rgb(209, 247, 250) ;
       margin: 0;
       padding: 0;
-      background-color:rgb(152, 247, 236);
       display: flex;
       font-size: 20px;
       justify-content: center;
@@ -30,11 +29,10 @@
         
 
     .container {
-      width: 90%;
-      max-width: 1200px;
+      max-width: 1400px;
       text-align: center;
-      font-size: 28px;
-      line-height: 30px;
+      font-size: 32px;
+      line-height: 40px;
     }
 
     h1 {
@@ -61,30 +59,30 @@
     }
 
     .step img {
-      width: 80px;
+      width: 110px;
       height: auto;
       margin-bottom: 15px;
     }
 
     .step h2 {
-      font-size: 18px;
+      font-size: 28px;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .step p {
-      font-size: 14px;
+      font-size: 18px;
       color: #555;
       line-height: 1.6;
     }
 
     .next {
-      margin-top: 20px;
+      margin-top: 30px;
       text-align: right;
     }
 
     .next a {
-      font-size: 14px;
+      font-size: 22px;
       color: blue;
       text-decoration: none;
       font-weight: bold;
@@ -104,10 +102,14 @@
         max-width: 100%;
       }
     }
+    .section-works{
+            padding: 10px;
+        }
   </style>
 </head>
 <body>
 <?php include('navbar.php'); ?>
+<section class="section-works">
   <div class="container">
     <h1>How Studysponsr Works</h1>
     <div class="steps">
@@ -134,5 +136,6 @@
       <a href="studentprofile.php" class="cta-button">Next</a>
     </div>
   </div>
+      </section>
 </body>
 </html>

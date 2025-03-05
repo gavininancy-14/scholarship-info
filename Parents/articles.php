@@ -33,14 +33,14 @@ $conn->close();
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: linear-gradient(45deg,rgb(154, 248, 255) 0%, #fad0c4 99%, #fad0c4 100%);
-            margin: 0;
-            padding: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(209, 247, 250) !important;
         }
 
         .container {
             max-width: 1300px;
-            background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+            background-color: rgb(209, 247, 250) ;
             margin: auto;
             text-align: center;
             padding: 20px;
