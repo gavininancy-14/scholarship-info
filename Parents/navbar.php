@@ -36,7 +36,7 @@
             <li><a class="dropdown-item" href="featuredscholarship.php">Featured Scholarships</a></li>
             <li><a class="dropdown-item" href="articles.php">Articles</a></li>
             <!-- <li><hr class="dropdown-divider"></li> -->
-            <li><a class="dropdown-item" href="categoryname.php">Detailed Articles</a></li>
+            
           </ul>
         </li>
         <li class="nav-item">
